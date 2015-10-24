@@ -1,0 +1,10 @@
+---
+layout: default
+title: Bovy group webpages
+---
+
+These pages give useful information for members of Bovy's group at the University of Toronto.
+
+h2(#contact). Contact info
+
+See "Bovy's personal webpage":http://astro.utoronto.ca/~bovy/.

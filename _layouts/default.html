@@ -1,0 +1,42 @@
+<!--Modified version of the buildr documentation's default page layout, which was released under the Apache license-->
+<html>
+  <head>
+    <meta content='text/html;charset=UTF-8' http-equiv='Content-Type'>
+    <title>Bovy's group pages&mdash; {{ page.title }}</title>
+    <style type='text/css'>
+      @import 'css/default.css';
+      @import 'css/syntax.css';
+    </style>
+    <style media='print' type='text/css'>
+      @import 'css/print.css';
+    </style>
+    <meta content='Bovy's group webpages' name='subject'>
+  </head>
+  <body>
+    <div id='wrap'>
+      <div id='header'>
+      </div>
+      <div id='pages'>
+        <ol class='toc'>
+          <li>General
+            <ol class="toc">
+              <li><a href='index.html'>Welcome</a></li>
+            </ol>
+          </li>
+          <li>Computing
+            <ol class="toc">
+              <li><a href='compute_servers.html'>Compute servers</a></li>
+              <li><a href='data.html'>Data</a></li>
+              <li><a href='jekyll.html'>This site</a></li>
+            </ol>
+          </li>
+        </ol>
+      </div>
+      <div id='content'>
+        <h1 id='{{ page.title | downcase | replace(' ', '_') }}'>{{ page.title }}</h1>
+        {{ content }}
+      </div>
+      <div id='footer'>Copyright &copy; 2015 Jo Bovy</div>
+    </div>
+  </body>
+</html>

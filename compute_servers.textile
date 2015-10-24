@@ -1,0 +1,114 @@
+---
+layout: default
+title: Compute servers in the department
+---
+
+Currently, there is a single compute server available with 32 cpus. This page gives some pointers on how to use it.
+
+h2(#setup). Setup and SSH keys
+
+You should have a @.bash_profile@ and @.bashrc@ file in your home directory for setting environment variables every time you log on (or similar for other shell types). If you need inspiration, you can look at @/home/bovy/.bash_profile@ and @/home/bovy/.bashrc@.
+
+To log on and use some of the other functionality, you should set up an SSH key, such that you can log on without having to type in your password. On your home computer (for example, your laptop which you use to log onto the compute servers or your office computer) do
+
+<pre>$ ssh-keygen -t rsa</pre>
+
+to generate a key. Use a long passphrase that you will remember. On the compute server you should create a @.ssh@ directory in your home directory
+
+<pre>
+$ mkdir .ssh
+$ chmod 700 .ssh
+$ cd .ssh
+</pre>
+
+and create an @authorized_keys@ file
+
+<pre>
+$ touch authorized_keys
+$ chmod 600 authorized_keys
+</pre>
+
+Log out and copy your public key to the compute server
+
+<pre>
+$ cat ~/.ssh/id_rsa.pub | ssh -l USERNAME SERVER.astro.utoronto.ca 'sh -c "cat - >> ~/.ssh/authorized_keys"'
+</pre>
+
+You will also want to use a @.ssh/config@ file on your home computer to make login in easier. This file has entries such as
+
+<pre>
+Host NICKNAME
+     Hostname SERVER.astro.utoronto.ca
+     User USERNAME
+     ForwardAgent yes
+</pre>
+
+Then you can login simply as
+
+<pre>
+$ ssh NICKNAME
+</pre>
+
+On a Mac Keychain will remember your key's passphrase, so you won't have to type it constantly. On Linux there are similar programs.
+
+h2(#install). Installing software
+
+You should install any software locally, including packages such as @galpy@ and @apogee@. All of the users of this server might be using different (development) versions of this and other software, so it's easiest if everybody installs locally as much as is practical. Create a @local/@ directory in your home directory
+
+<pre>
+$ cd
+$ mkdir local
+</pre>
+
+and then install software to that directory. For compiled programs this means that you typically do
+
+<pre>
+$ ./configure --prefix=~/local
+...
+</pre>
+
+Python packages can be installed as
+
+<pre>
+$ python setup.py install --prefix=~/local
+</pre>
+
+or with pip as
+
+<pre>
+$ pip install PACKAGE --install-option="--prefix=~/local"
+</pre>
+
+Python packages developed in the group (such as @galpy@ and @apogee@) should be installed in development mode with
+
+<pre>
+$ python setup.py develop --prefix=~/local
+</pre>
+
+To use Python packages installed locally, set (or add) to your @PYTHONPATH@ as follows
+
+<pre>
+$ export PYTHONPATH=~/local/lib/python2.7/site-packages
+</pre>
+
+h2(#ipython). Running iPython/Jupyter notebooks
+
+You can run an iPython notebook on the server while manipulating and displaying it on your home computer using the following steps. First, login to the compute server and start a notebook server
+
+<pre>
+$ ipython notebook --no-browser --port=8889
+</pre>
+
+On your local, home computer open an SSH tunnel as follows
+
+<pre>
+$ ssh -N -L localhost:8888:localhost:8889 NICKNAME
+</pre>
+
+where @NICKNAME@ is the same ssh shortcut as above. Then open a tab in your browser and navigate to
+
+<pre>
+localhost:8888
+</pre>
+
+which displays the notebook server that is running remotely. To close the SSH tunnel, just terminate the SSH tunnel running process. You can start the remote notebook in a UNIX "screen":https://kb.iu.edu/d/acuy session. This way you can log out while detaching the screen (thus keeping the process running remotely) and this also safeguards you against losing the connection to the remote server while you are working in the notebook.

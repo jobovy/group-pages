@@ -1,0 +1,23 @@
+---
+layout: default
+title: Accessing data on the compute servers
+---
+
+h2(#location). Where are the data located?
+
+Large data sets are located in the 
+
+@/data/@
+
+directory. Typically, you should _not_ depend on this directly, but use an environment variable @DATADIR@ that is set to this directory and your code should use this environment variable to find the location of the top data directory. The same holds for the individual large data sets described below. All of these data might get moved around in the future, so by relying on environment variables your code will be resilient against such changes.
+
+h3(#apogee). APOGEE data
+
+The APOGEE data is located at @$DATADIR/sdss/apogee@ following the layout described "here":https://github.com/jobovy/apogee#data-files-and-environment-variables. To use this data, you should set an environment variable @SDSS_LOCAL_SAS_MIRROR@ to point to @$DATADIR/sdss/apogee@. This wil allow use of the "@apogee@":https://github.com/jobovy/apogee package, but will also be more generally useful.
+
+h2(#download). Downloading data
+
+If you require a large data set, it should be downloaded and kept under the @DATADIR@ directory. Only users that are part of the @datagrp@ group are allowed to write to @DATADIR@. Users are added to this group using
+
+<pre>usermod -g datagrp USER</pre>
+

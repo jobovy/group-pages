@@ -1,0 +1,14 @@
+---
+layout: default
+title: Maintenance of this website
+---
+
+These group pages are maintained with "Jekyll":https://jekyllrb.com/ using the "Textile":http://redcloth.org/textile  markup language. This page has some information on how to maintain it.
+
+h2(#Building). Building
+
+The website is built using
+
+<pre>jekyll build</pre>
+
+which places the site into a @_site/@ subdirectory. This folder can then be uploaded to the public folder.
