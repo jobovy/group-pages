@@ -35,6 +35,8 @@ a:hover{
 }
 
 img {
+  max-width: 80%; 
+  height: auto; 
   border: none;
 }
 
