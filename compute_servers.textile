@@ -60,7 +60,7 @@ $ cd
 $ mkdir local
 </pre>
 
-and then install software to that directory. For compiled programs this means that you typically do
+and then install software to that directory. Make sure to add your @local/bin@ directory to your path (@export PATH=$HOME/local/bin:$PATH@ in your @.bash_profile@).For compiled programs this means that you typically do
 
 <pre>
 $ ./configure --prefix=~/local
@@ -90,6 +90,8 @@ To use Python packages installed locally, set (or add) to your @PYTHONPATH@ as f
 <pre>
 $ export PYTHONPATH=~/local/lib/python2.7/site-packages
 </pre>
+
+Installing @FERRE@ with the @apogee@ package locally doesn't work (the installer can't figure out to copy the necessary binaries to @$HOME/local/bin@), so to install this you need to run the installation with @--install-ferre@, let it fail, and then copy the @ferre@ and @ascii2bin@ binaries to @$HOME/local/bin@ yourself (and make them executable with @chmod u+x ~/local/bin/ferre@ and @chmod u+x ~/local/bin/ascii2bin@.
 
 h2(#ipython). Running iPython/Jupyter notebooks
 
