@@ -1,12 +1,36 @@
 ---
 layout: default
-title: Bovy Galactic Astrophysics group
+title: Galactic Astrophysics group
 ---
 
 h2(#what). What do we do?
 
+In the Galactic Astrophysics group at the University of Toronto, we investigate the physical processes that drive the formation and evolution of galaxies and we research the nature of dark matter using astrophysical observations. In particular, we focus on understanding the structure and dynamics of the Milky Way, our home galaxy. We approach these questions through the analysis of large data sets from surveys such as SDSS and _Gaia_ and theoretical modeling. Some of the specific questions that we are interested in are:
+* What is the three-dimensional structure of different stellar populations in the Milky Way?
+* What is the history of star formation at different locations in the Galaxy?
+* Along what chemical pathways does the evolution of the disk proceed? Can we tag all individual star-formation events?
+* What is the large-scale gravitational potential in the luminous region of the Galaxy and beyond? What is the detailed radial profile and shape of the dark matter halo?
+* What is the small-scale distribution of dark matter and is it consistent with that predicted if dark matter is cold?
+* Is gravity Newtonian at low accelerations?
+* What is the relation between the Milky Way's disk and its inner bulge/bar region? Can we reconstruct how the central region formed?
+
+We are seeking _detailed_ answers to all of these questions, going beyond the broad-brush picture that we currently have. We do this by pushing the observational data sets to their limits through use of sensitive, flexible, and robust analysis techniques.
+
+Much of the research in our group is focused on developing new inference methods for the interpretation of astrophysical data, which has specific demands due to ubiquitous sources of noise, selection effects, and incomplete physical models for most of the systems (stars, galaxies) that we are dealing with. Some of the methodological questions that we are developing solutions for are:
+* How do we best use non-trivial uncertainty distributions (for example, multi-peaked or very asymmetric) in model inference? This is a major issue in every question that deals with stellar ages, for which precise measurements are rare.
+* How can we cope with incomplete models for important, yet secondary parts of our models? This comes up, for example, when using stellar populations as dynamical tracers, where the stellar distribution function is important for getting the dynamics right. Or when employing simplified spectroscopic modeling when investigating the overall abundance structure of the Galaxy. 
+* Can we efficiently model hundreds of millions of data points in upcoming surveys, while taking into account all of the observational effects (including heteroskedastic uncertainties, variations in observing conditions, etc.)? Should we resort to modeling statistics? Can we even compute our models accurately enough for these large data sets?
+* How do we construct robust physical _measurements_ when data analysis requires specific models? That is, how do we generalize inferences beyond the explored model space? This question is motivated by the fact that _forward modeling_ is always the most sensitive measurement technique, but the specific models that it requires make its results often dependent on the limited number of models that can be efficiently explored.
+
+We approach all of these questions by making use of our significant (if incomplete) physical understanding of the processes governing the structure of stars, galaxies, and the Universe.
+
 h2(#who). Who are we?
+
+The Galactic Astrophysics group is led by Jo Bovy, Canada Research Chair in Galactic Astrophysics. Current members of the team are:
+* Jo Bovy ("@jobovy":https://github.com/jobovy/)
+* Anita Bahmanyar ("@Andromedanita":https://github.com/Andromedanita)
+* Natalie Price-Jones ("@NatalieP-J":https://github.com/NatalieP-J)
 
 h2(#contact). Contact info
 
-See "Bovy's personal webpage":http://astro.utoronto.ca/~bovy/.
+See "the UofT astro directory":http://www.astro.utoronto.ca/people/directory-all-a-z/.

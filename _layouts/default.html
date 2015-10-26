@@ -45,7 +45,7 @@
         <h1 id='{{ page.title | downcase | replace(' ', '_') }}'>{{ page.title }}</h1>
         {{ content }}
       </div>
-      <div id='footer'>Copyright &copy; 2015 Jo Bovy</div>
+      <div id='footer'>Copyright &copy; 2015&ndash;{{site.time | date: "%Y"}} Jo Bovy</div>
     </div>
   </body>
 </html>
