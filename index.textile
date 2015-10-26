@@ -1,9 +1,11 @@
 ---
 layout: default
-title: Bovy group webpages
+title: Bovy Galactic Astrophysics group
 ---
 
-These pages give useful information for members of Bovy's group at the University of Toronto.
+h2(#what). What do we do?
+
+h2(#who). Who are we?
 
 h2(#contact). Contact info
 
