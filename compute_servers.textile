@@ -95,19 +95,21 @@ Installing @FERRE@ with the @apogee@ package locally doesn't work (the installer
 
 h2(#ipython). Running iPython/Jupyter notebooks
 
-You can run an iPython notebook on the server while manipulating and displaying it on your home computer using the following steps. First, login to the compute server and start a notebook server
+You can run an iPython notebook on the server while manipulating and displaying it on your home computer using the following steps. First, login to the compute server and start a notebook server on some port PORT (PORT should be something like 8889, but choose something different to avoid overlap with other users)
 
 <pre>
-$ ipython notebook --no-browser --port=8889
+$ ipython notebook --no-browser --port=PORT
 </pre>
+
+Check that you don't get an error message that the PORT is already in use
 
 On your local, home computer open an SSH tunnel as follows
 
 <pre>
-$ ssh -N -L localhost:8888:localhost:8889 NICKNAME
+$ ssh -N -L localhost:8888:localhost:PORT NICKNAME
 </pre>
 
-where @NICKNAME@ is the same ssh shortcut as above. Then open a tab in your browser and navigate to
+where @NICKNAME@ is the same ssh shortcut as above. If you have an IPython notebook running locally you need to use a different local port (not 8888, because that will be used by the local notebook). Then open a tab in your browser and navigate to
 
 <pre>
 localhost:8888
