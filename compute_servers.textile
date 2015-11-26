@@ -7,7 +7,7 @@ Currently, there is a single compute server available with 32 cpus. This page gi
 
 h2(#setup). Setup and SSH keys
 
-You should have a @.bash_profile@ and @.bashrc@ file in your home directory for setting environment variables every time you log on (or similar for other shell types). If you need inspiration, you can look at @/home/bovy/.bash_profile@ and @/home/bovy/.bashrc@.
+You should have a @.bash_profile@ and @.bashrc@ file in your home directory for setting environment variables every time you log on (or similar for other shell types). If you need inspiration, you can look at @/home/bovy/.bash_profile@ and @/home/bovy/.bashrc@. To avoid backend issues with matplotlib, you should have a file @.matplotlib/matplotlibrc@ in your home directory that sets the backend to @Agg@. You can download a sample file "here":http://matplotlib.org/_static/matplotlibrc and change the @backend@ line to use @Agg@.
 
 To log on and use some of the other functionality, you should set up an SSH key, such that you can log on without having to type in your password. On your home computer (for example, your laptop which you use to log onto the compute servers or your office computer) do
 
