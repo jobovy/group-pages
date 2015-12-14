@@ -93,6 +93,17 @@ $ export PYTHONPATH=~/local/lib/python2.7/site-packages
 
 Installing @FERRE@ with the @apogee@ package locally doesn't work (the installer can't figure out to copy the necessary binaries to @$HOME/local/bin@), so to install this you need to run the installation with @--install-ferre@, let it fail, and then copy the @ferre@ and @ascii2bin@ binaries to @$HOME/local/bin@ yourself (and make them executable with @chmod u+x ~/local/bin/ferre@ and @chmod u+x ~/local/bin/ascii2bin@.
 
+h2(#nemo). Running NEMO
+
+"NEMO":http://admit.astro.umd.edu/nemo/ is installed on the server. To be able to use it, you can add the following line to your
+@.bash_profile@ or @.bashrc@
+
+<pre>
+if [ -z "$NEMO" ]; then source ~bovy/Repos/nemo/nemo_start.sh; fi
+</pre>
+
+You can also install @NEMO@ locally yourself and then probably want to start from "this GitHub version":https://github.com/jobovy/nemo.
+
 h2(#ipython). Running iPython/Jupyter notebooks
 
 You can run an iPython notebook on the server while manipulating and displaying it on your home computer using the following steps. First, login to the compute server and start a notebook server on some port PORT (PORT should be something like 8889, but choose something different to avoid overlap with other users)
