@@ -9,6 +9,6 @@ h2(#Building). Building
 
 The website is built using
 
-<pre>jekyll build</pre>
+<pre>jekyll build --destination=~/public_html/group</pre>
 
-which places the site into a @_site/@ subdirectory. This folder can then be uploaded to the public folder.
+.
