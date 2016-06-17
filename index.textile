@@ -30,6 +30,7 @@ The Galactic Astrophysics group is led by Jo Bovy, Canada Research Chair in Gala
 * Jo Bovy ("@jobovy":https://github.com/jobovy/)
 * Anita Bahmanyar ("@Andromedanita":https://github.com/Andromedanita)
 * Natalie Price-Jones ("@NatalieP-J":https://github.com/NatalieP-J)
+* Aladdin Seaifan ("@SeaifanAladdin":https://github.com/SeaifanAladdin)
 
 h2(#contact). Contact info
 
