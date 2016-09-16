@@ -19,6 +19,12 @@ h3(#gaia). Gaia data
 
 The Gaia data are located at @$DATADIR/Gaia@ following the layout of the Gaia data archive. To use this data as part of the "@gaia_tools@":https://github.com/jobovy/gaia_tools package, you should set an environment variable @GAIA_TOOLS_DATA@ to point to @$DATADIR/data4code/gaia_tools@.
 
+The DR1 Gaia data were downloaded with the following commands:
+
+<pre>curl -O http://cdn.gea.esac.esa.int/Gaia/tgas_source/fits/TgasSource_000-000-0[00-15].fits
+curl -O http://cdn.gea.esac.esa.int/Gaia/gaia_source/fits/GaiaSource_000-0[00-19]-[000-255].fits
+curl -O http://cdn.gea.esac.esa.int/Gaia/gaia_source/fits/GaiaSource_000-020-[000-110].fits</pre>
+
 h2(#download). Downloading data
 
 If you require a large data set, it should be downloaded and kept under the @DATADIR@ directory. Only users that are part of the @datagrp@ group are allowed to write to @DATADIR@. Users are added to this group using
