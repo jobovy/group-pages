@@ -13,7 +13,11 @@ directory. Typically, you should _not_ depend on this directly, but use an envir
 
 h3(#apogee). APOGEE data
 
-The APOGEE data is located at @$DATADIR/sdss/apogee@ following the layout described "here":https://github.com/jobovy/apogee#data-files-and-environment-variables. To use this data, you should set an environment variable @SDSS_LOCAL_SAS_MIRROR@ to point to @$DATADIR/sdss/apogee@. This wil allow use of the "@apogee@":https://github.com/jobovy/apogee package, but will also be more generally useful.
+The APOGEE data are located at @$DATADIR/sdss/apogee@ following the layout described "here":https://github.com/jobovy/apogee#data-files-and-environment-variables. To use this data, you should set an environment variable @SDSS_LOCAL_SAS_MIRROR@ to point to @$DATADIR/sdss/apogee@. This wil allow use of the "@apogee@":https://github.com/jobovy/apogee package, but will also be more generally useful.
+
+h3(#gaia). Gaia data
+
+The Gaia data are located at @$DATADIR/Gaia@ following the layout of the Gaia data archive. To use this data as part of the "@gaia_tools@":https://github.com/jobovy/gaia_tools package, you should set an environment variable @GAIA_TOOLS_DATA@ to point to @$DATADIR/data4code/gaia_tools@.
 
 h2(#download). Downloading data
 
