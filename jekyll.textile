@@ -9,6 +9,10 @@ h2(#Building). Building
 
 The website is built using
 
-<pre>jekyll build --destination=~/public_html/group</pre>
+<pre>jekyll build</pre>
 
-.
+on the server and then running 
+
+<pre>./update_group_pages.sh</pre>
+
+on @lepus@.
