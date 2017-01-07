@@ -25,6 +25,28 @@ The DR1 Gaia data were downloaded with the following commands:
 curl -O http://cdn.gea.esac.esa.int/Gaia/gaia_source/fits/GaiaSource_000-0[00-19]-[000-255].fits
 curl -O http://cdn.gea.esac.esa.int/Gaia/gaia_source/fits/GaiaSource_000-020-[000-110].fits</pre>
 
+h3(#2mass). 2MASS and other catalogs
+
+2MASS data are located at @$DATADIR/2mass@ and have been directly downloaded from the "@2MASS archive@":http://www.ipac.caltech.edu/2mass/overview/access.html. The data have been loaded into a "PostgreSQL":https://www.postgresql.org/ database @catalogs@ that is running on the server (as is usual, this database is owned by the user @postgres@). The point-sources table is @twomass_psc@. You can use it for example as 
+<pre>> psql catalogs <notextile>-</notextile>U postgres
+catalogs=# select count(<notextile>*</notextile>) as rows FROM twomass_psc;
+   rows    
+-----------
+ 470992970
+(1 row)
+       </pre>
+In Python, you can access this database using, e.g., the "@psycopg2@":http://initd.org/psycopg/docs/ module
+<pre>>>> import psycopg2
+>>> conn= psycopg2.connect("dbname=catalogs user=postgres")
+>>> cur= conn.cursor()
+>>> cur.execute("select count(*) as rows FROM twomass_psc;")
+>>> print(cur.fetchall())
+[(470992970L,)]
+>>> cur.close()
+>>> conn.close()
+</pre>
+Note that these queries take about five minutes to execute.
+
 h2(#download). Downloading data
 
 If you require a large data set, it should be downloaded and kept under the @DATADIR@ directory. Only users that are part of the @datagrp@ group are allowed to write to @DATADIR@. Users are added to this group using
