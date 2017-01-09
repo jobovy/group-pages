@@ -50,7 +50,9 @@ A slightly more complicated computes the number counts in 0.1 mag bins in J:
 >>> a= numpy.array(cur.fetchall(),dtype='float').T
 >>> sindx= numpy.argsort(a<notextile>[0]</notextile>)
 >>> semilogy(a[0,sindx]/10.,a[1,sindx])</pre>
-Note that these queries each take about five minutes to execute.
+Note that these queries each take about five minutes to execute. The 2MASS point-source catalog comes with a table @twomass_psc_hp12@ that has the HEALPix index at level 12 in nested format for (RA,Dec). The HEALPix index is contained in @hp12index@ and can be joined with @twomass_psc@ on @pts_key@. For example, to get all stars in pixel 100 at level 10, you can run in Python
+<pre>cur.execute("select ra,decl from twomass_psc, twomass_psc_hp12 where twomass_psc.pts_key = twomass_psc_hp12.pts_key and floor(hp12index/16) = 100;")</pre>
+making use of the fact that pixel numbers at lower levels are simple divisions by a factor of four for each lower level.
 
 h2(#download). Downloading data
 
