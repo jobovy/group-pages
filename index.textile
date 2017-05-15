@@ -28,9 +28,14 @@ h2(#who). Who are we?
 
 The Galactic Astrophysics group is led by Jo Bovy, Canada Research Chair in Galactic Astrophysics. Current members of the team are:
 * Jo Bovy ("@jobovy":https://github.com/jobovy/)
-* Anita Bahmanyar ("@Andromedanita":https://github.com/Andromedanita)
+* Morgan Bennett
+* Jack Hong ("@jackhong6":https://github.com/jackhong6)
 * Jason Hunt (Dunlap Postdoctoral Fellow; "@JASHunt":https://github.com/JASHunt)
 * Natalie Price-Jones ("@NatalieP-J":https://github.com/NatalieP-J)
+
+Group alumni include:
+
+* Anita Bahmanyar ("@Andromedanita":https://github.com/Andromedanita)
 * Aladdin Seaifan ("@SeaifanAladdin":https://github.com/SeaifanAladdin)
 
 h2(#contact). Contact info
