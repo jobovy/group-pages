@@ -91,6 +91,14 @@ To use Python packages installed locally, set (or add) to your @PYTHONPATH@ as f
 $ export PYTHONPATH=~/local/lib/python2.7/site-packages
 </pre>
 
+or
+
+<pre>
+$ export PYTHONPATH=~/local/lib/python3.6/site-packages
+</pre>
+
+if you are using Python 3.6.
+
 Installing @FERRE@ with the @apogee@ package locally doesn't work (the installer can't figure out to copy the necessary binaries to @$HOME/local/bin@), so to install this you need to run the installation with @--install-ferre@, let it fail, and then copy the @ferre@ and @ascii2bin@ binaries to @$HOME/local/bin@ yourself (and make them executable with @chmod u+x ~/local/bin/ferre@ and @chmod u+x ~/local/bin/ascii2bin@.
 
 h2(#nemo). Running NEMO
