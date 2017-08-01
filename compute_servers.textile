@@ -142,4 +142,8 @@ and then setup a random password (from a service like "RANDOM.ORG":https://www.r
 $ sudo passwd NEW_USERNAME
 </pre>
 
-This password should be immediately changed by the new user.
+This password should be immediately changed by the new user. Make a scratch directory and change the ownership to the new user with
+
+<pre>
+$ sudo chown -R NEW_USERNAME NEW_USERNAME
+</pre>
