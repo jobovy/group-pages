@@ -155,3 +155,5 @@ This password should be immediately changed by the new user. Make a scratch dire
 <pre>
 $ sudo chown -R NEW_USERNAME NEW_USERNAME
 </pre>
+
+The above only creates the account on one server. Copy the relevant entry in @/etc/passwd@, @/etc/group@, and @/etc/shadow@ to the other server to add the user to the other server (after they setup their password presumably).
