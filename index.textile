@@ -31,7 +31,7 @@ The Galactic Astrophysics group is led by Jo Bovy, Canada Research Chair in Gala
 * Morgan Bennett ("@morganb-phys":https://github.com/morganb-phys/)
 * Jack Hong ("@jackhong6":https://github.com/jackhong6)
 * Jason Hunt (Dunlap Postdoctoral Fellow; "@JASHunt":https://github.com/JASHunt)
-* Shaziana Kaderali
+* Shaziana Kaderali ("@ShazianaKaderali":https://github.com/ShazianaKaderali)
 * Natalie Price-Jones ("@NatalieP-J":https://github.com/NatalieP-J)
 * Jeremy Webb (NSERC Postdoctoral Fellow)
 
