@@ -112,12 +112,18 @@ if [ -z "$NEMO" ]; then source ~bovy/Repos/nemo/nemo_start.sh; fi
 
 You can also install @NEMO@ locally yourself and then probably want to start from "this GitHub version":https://github.com/jobovy/nemo.
 
-h2(#ipython). Running iPython/Jupyter notebooks
+h2(#ipython). Running iPython/Jupyter notebooks/lab
 
 You can run an iPython notebook on the server while manipulating and displaying it on your home computer using the following steps. First, login to the compute server and start a notebook server on some port PORT (PORT should be something like 8889, but choose something different to avoid overlap with other users)
 
 <pre>
-$ ipython notebook --no-browser --port=PORT
+$ jupyter notebook --no-browser --port=PORT
+</pre>
+
+or for Jupyter lab
+
+<pre>
+$ jupyter lab --no-browser --port=PORT
 </pre>
 
 Check that you don't get an error message that the PORT is already in use
