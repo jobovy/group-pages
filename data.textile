@@ -19,13 +19,19 @@ h3(#gaia). Gaia data
 
 The Gaia data are located at @$DATADIR/Gaia@ following the layout of the Gaia data archive. To use this data as part of the "@gaia_tools@":https://github.com/jobovy/gaia_tools package, you should set an environment variable @GAIA_TOOLS_DATA@ to point to @$DATADIR/data4code/gaia_tools@.
 
-The DR1 Gaia data were downloaded with the following commands:
+The DR1 Gaia data were downloaded with the following commands (note that the DR1 data were later moved to a sub-directory @gdr1@):
 
 <pre>curl -O http://cdn.gea.esac.esa.int/Gaia/tgas_source/fits/TgasSource_000-000-0[00-15].fits
 curl -O http://cdn.gea.esac.esa.int/Gaia/gaia_source/fits/GaiaSource_000-0[00-19]-[000-255].fits
 curl -O http://cdn.gea.esac.esa.int/Gaia/gaia_source/fits/GaiaSource_000-020-[000-110].fits</pre>
 
-h3(#2mass). 2MASS and other catalogs
+The DR2 Gaia data were downloaded using
+
+<pre>wget -r -nH -nc --cut-dirs=2 --no-parent --reject="index.html*",vot.gz http://cdn.gea.esac.esa.int/Gaia/gdr2/</pre>
+
+although rejecting the @index.html@ files seems not to have worked! The DR2 data are also loaded into the @catalogs@ database as described below.
+
+h3(#2mass). 2MASS, Gaia DR2, and other catalogs
 
 2MASS data are located at @$DATADIR/2mass@ and have been directly downloaded from the "@2MASS archive@":http://www.ipac.caltech.edu/2mass/overview/access.html. The data have been loaded into a "PostgreSQL":https://www.postgresql.org/ database @catalogs@ that is running on the server (as is usual, this database is owned by the user @postgres@). The point-sources table is @twomass_psc@; the schema for this table is "here":http://irsa.ipac.caltech.edu/2MASS/download/allsky/format_psc.html. You can use it for example as 
 <pre>> psql catalogs <notextile>-</notextile>U postgres
@@ -51,8 +57,22 @@ A slightly more complicated computes the number counts in 0.1 mag bins in J:
 >>> sindx= numpy.argsort(a<notextile>[0]</notextile>)
 >>> semilogy(a[0,sindx]/10.,a[1,sindx])</pre>
 Note that these queries each take about five minutes to execute. The 2MASS point-source catalog comes with a table @twomass_psc_hp12@ that has the HEALPix index at level 12 in nested format for (RA,Dec). The HEALPix index is contained in @hp12index@ and can be joined with @twomass_psc@ on @pts_key@. For example, to get all stars in pixel 100 at level 10, you can run in Python
+
 <pre>cur.execute("select ra,decl from twomass_psc, twomass_psc_hp12 where twomass_psc.pts_key = twomass_psc_hp12.pts_key and floor(hp12index/16) = 100;")</pre>
+
 making use of the fact that pixel numbers at lower levels are simple divisions by a factor of four for each lower level.
+
+The Gaia DR2 data have similarly been loaded into the @catalogs@ database as table @gdr2_gaia_source@. The load command was
+<pre>> psql <notextile>-</notextile>f gaia_source_schema catalogs
+> find gaia_source/csv/ -name GaiaSource_*.csv.gz | xargs zcat | sed -e '/^solution_id/d' | psql -c "copy gdr2_gaia_source from stdin with delimiter ',' NULL as ''" catalogs</pre>
+
+using the schema in the @$DATADIR/Gaia/gdr2@ directory. The database was then configured for rapid access to random subsets of the data by doing
+<pre>> psql catalogs <notextile>-</notextile>U postgres
+catalogs=# create index random_index_idx on gdr2_gaia_source (random_index);
+catalogs=# set maintenance_work_mem= '32GB';
+catalogs=# cluster verbose gdr2_gaia_source using random_index_idx;</pre>
+
+The @gaia_source_with_rv@ data was loaded into a similar table @gdr2_gaia_source_with_rv@.
 
 h2(#download). Downloading data
 
