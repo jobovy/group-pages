@@ -62,17 +62,23 @@ Note that these queries each take about five minutes to execute. The 2MASS point
 
 making use of the fact that pixel numbers at lower levels are simple divisions by a factor of four for each lower level.
 
-The Gaia DR2 data have similarly been loaded into the @catalogs@ database as table @gdr2_gaia_source@. The load command was
+The Gaia DR2 data have similarly been loaded into the @catalogs@ database as table @gaiadr2_gaia_source@. The load command was
 <pre>> psql <notextile>-</notextile>f gaia_source_schema catalogs
-> find gaia_source/csv/ -name GaiaSource_*.csv.gz | xargs zcat | sed -e '/^solution_id/d' | psql -c "copy gdr2_gaia_source from stdin with delimiter ',' NULL as ''" catalogs</pre>
+> find gaia_source/csv/ -name GaiaSource_*.csv.gz | xargs zcat | sed -e '/^solution_id/d' | psql -c "copy gaiadr2_gaia_source from stdin with delimiter ',' NULL as ''" catalogs</pre>
 
 using the schema in the @$DATADIR/Gaia/gdr2@ directory. The database was then configured for rapid access to random subsets of the data by doing
 <pre>> psql catalogs <notextile>-</notextile>U postgres
-catalogs=# create index random_index_idx on gdr2_gaia_source (random_index);
+catalogs=# create index random_index_idx on gaiadr2_gaia_source (random_index);
 catalogs=# set maintenance_work_mem= '32GB';
-catalogs=# cluster verbose gdr2_gaia_source using random_index_idx;</pre>
+catalogs=# cluster verbose gaiadr2_gaia_source using random_index_idx;</pre>
 
-The @gaia_source_with_rv@ data was loaded into a similar table @gdr2_gaia_source_with_rv@.
+The @gaia_source_with_rv@ data was loaded into a similar table @gaiadr2_gaia_source_with_rv@.
+
+Finally, the @catalogs@ database was made read-only by default using
+<pre>> psql catalogs <notextile>-</notextile>U postgres
+catalogs=# set default_transaction_read_only= true;</pre>
+
+but note that this can be turned off by simply running the last command with @false@ instead.
 
 h2(#download). Downloading data
 
