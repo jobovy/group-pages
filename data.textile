@@ -29,7 +29,17 @@ The DR2 Gaia data were downloaded using
 
 <pre>wget -r -nH -nc --cut-dirs=2 --no-parent --reject="index.html*",vot.gz http://cdn.gea.esac.esa.int/Gaia/gdr2/</pre>
 
-although rejecting the @index.html@ files seems not to have worked! The DR2 data are also loaded into the @catalogs@ database as described below.
+although rejecting the @index.html@ files seems not to have worked! The DR2 data are also loaded into the @catalogs@ database as described below. We also downloaded the Gaia DR2 2MASS match using queries like 
+
+<pre>SELECT tmass_match.*, tmass.designation, tmass.ra, tmass.dec, tmass.j_m, 
+tmass.j_msigcom, tmass.h_m, tmass.h_msigcom, tmass.ks_m, tmass.ks_msigcom, 
+tmass.ext_key, tmass.ph_qual
+FROM gaiadr2.tmass_best_neighbour AS tmass_match
+INNER JOIN gaiadr1.tmass_original_valid AS tmass ON tmass.tmass_oid = tmass_match.tmass_oid
+WHERE tmass_match.source_id BETWEEN MIN_SOURCE_ID AND MAX_SOURCE_ID;</pre>
+
+in chunks of 17 @gaia_source@ CSV files (with @source_id@ between
+@MIN_SOURCE_ID@ and @MAX_SOURCE_ID@).
 
 h3(#2mass). 2MASS, Gaia DR2, and other catalogs
 
@@ -73,6 +83,10 @@ catalogs=# set maintenance_work_mem= '32GB';
 catalogs=# cluster verbose gaiadr2_gaia_source using random_index_idx;</pre>
 
 The @gaia_source_with_rv@ data was loaded into a similar table @gaiadr2_gaia_source_with_rv@.
+
+The Gaia DR2 2MASS match was loaded using
+<pre>> psql <notextile>-</notextile>f tmass_schema catalogs
+> find tmass_best_neighbour/csv/ -name tmass_best_neighbour_*.csv.gz | xargs zcat | sed -e '/^source_id/d' | psql -c "SET TRANSACTION READ WRITE; copy gaiadr2_tmass_best_neighbour from stdin with delimiter ',' NULL as ''" catalogs</pre>
 
 Finally, the @catalogs@ database was made read-only by default using
 <pre>> psql catalogs <notextile>-</notextile>U postgres
