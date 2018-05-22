@@ -29,14 +29,18 @@ h2(#who). Who are we?
 The Galactic Astrophysics group is led by Jo Bovy, Canada Research Chair in Galactic Astrophysics. Current members of the team are:
 * Jo Bovy ("@jobovy":https://github.com/jobovy/)
 * Morgan Bennett ("@morganb-phys":https://github.com/morganb-phys/)
+* Mathew Bub ("@mwbub":https://github.com/mwbub)
 * Jason Hunt (Dunlap Postdoctoral Fellow; "@JASHunt":https://github.com/JASHunt)
 * Henry Leung ("@henrysky":https://github.com/henrysky)
+* Ayush Pandhi ("@AyushPandhi":https://github.com/AyushPandhi)
+* Michael Poon ("@michaelkmpoon":https://github.com/michaelkmpoon)
 * Natalie Price-Jones ("@npricejones":https://github.com/npricejones)
-* Philip Tsang ("@qthen":https://github.com/qthen)
 * Jeremy Webb (NSERC Postdoctoral Fellow; "@webbjj":https://github.com/webbjj)
+* Samuel Wong ("@samuelwong100":https://github.com/samuelwong100)
 
 Group alumni include:
 
+* Philip Tsang ("@qthen":https://github.com/qthen)
 * Jack Hong ("@jackhong6":https://github.com/jackhong6)
 * Shaziana Kaderali ("@ShazianaKaderali":https://github.com/ShazianaKaderali)
 * Anita Bahmanyar ("@Andromedanita":https://github.com/Andromedanita)
