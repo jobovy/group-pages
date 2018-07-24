@@ -84,9 +84,13 @@ catalogs=# cluster verbose gaiadr2_gaia_source using random_index_idx;</pre>
 
 The @gaia_source_with_rv@ data was loaded into a similar table @gaiadr2_gaia_source_with_rv@.
 
-The Gaia DR2 2MASS match was loaded using
-<pre>> psql <notextile>-</notextile>f tmass_schema catalogs
-> find tmass_best_neighbour/csv/ -name tmass_best_neighbour_*.csv.gz | xargs zcat | sed -e '/^source_id/d' | psql -c "SET TRANSACTION READ WRITE; copy gaiadr2_tmass_best_neighbour from stdin with delimiter ',' NULL as ''" catalogs</pre>
+The Gaia DR2 2MASS match was downloaded using the script available "here":https://github.com/jobovy/gaia_tools/blob/47a573259b0ffbe7a67d188edd3afebcecf88132/scripts/download_tmass_best_neighbour.py and then loaded with the schema available "here":https://github.com/jobovy/gaia_tools/blob/47a573259b0ffbe7a67d188edd3afebcecf88132/scripts/tmass_schema using
+<pre>> psql <notextile>-</notextile>f tmass_schema catalogs <notextile>-</notextile>U postgres
+> find tmass_best_neighbour/csv/ <notextile>-</notextile>name tmass_best_neighbour_*.csv.gz | xargs zcat | sed <notextile>-</notextile>e '/^source_id/d' | psql <notextile>-</notextile>c "SET TRANSACTION READ WRITE; copy gaiadr2_tmass_best_neighbour from stdin with delimiter ',' NULL as ''" catalogs <notextile>-</notextile>U postgres</pre>
+
+Similarly, the Gaia DR2 PanSTARRS1 match was downloaded using the script available "here":https://github.com/jobovy/gaia_tools/blob/8c6b548b1d80cb27454e83aa70e3a66f85aecc93/scripts/download_panstarrs1_best_neighbour.py and then loaded with the schema available "here":https://github.com/jobovy/gaia_tools/blob/8c6b548b1d80cb27454e83aa70e3a66f85aecc93/scripts/panstarrs1_schema using
+<pre>> psql <notextile>-</notextile>f panstarrs1_schema catalogs <notextile>-</notextile>U postgres
+> find panstarrs1_best_neighbour/csv/ <notextile>-</notextile>name panstarrs1_best_neighbour_*.csv.gz | xargs zcat | sed <notextile>-</notextile>e '/^source_id/d' | psql <notextile>-</notextile>c "SET TRANSACTION READ WRITE; copy gaiadr2_panstarrs1_best_neighbour from stdin with delimiter ',' NULL as ''" catalogs <notextile>-</notextile>U postgres</pre>
 
 Finally, the @catalogs@ database was made read-only by default using
 <pre>> psql catalogs <notextile>-</notextile>U postgres
