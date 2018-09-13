@@ -31,16 +31,20 @@ The Galactic Astrophysics group is led by Jo Bovy, Canada Research Chair in Gala
 * Morgan Bennett ("@morganb-phys":https://github.com/morganb-phys/)
 * Mathew Bub ("@mwbub":https://github.com/mwbub)
 * Victor Chan ("@victorcchan":https://github.com/victorcchan)
+* Abhinav Jindal
+* David Hendel
 * Jason Hunt (Dunlap Postdoctoral Fellow; "@JASHunt":https://github.com/JASHunt)
+* James Lane ("@jamesmlane":https://github.com/jamesmlane)
 * Henry Leung ("@henrysky":https://github.com/henrysky)
-* Ayush Pandhi ("@AyushPandhi":https://github.com/AyushPandhi)
-* Michael Poon ("@michaelkmpoon":https://github.com/michaelkmpoon)
 * Natalie Price-Jones ("@npricejones":https://github.com/npricejones)
+* Nathaniel Starkman ("@nstarman":https://github.com/nstarman)
 * Jeremy Webb (NSERC Postdoctoral Fellow; "@webbjj":https://github.com/webbjj)
-* Samuel Wong ("@samuelwong100":https://github.com/samuelwong100)
 
 Group alumni include:
 
+* Ayush Pandhi ("@AyushPandhi":https://github.com/AyushPandhi)
+* Michael Poon ("@michaelkmpoon":https://github.com/michaelkmpoon)
+* Samuel Wong ("@samuelwong100":https://github.com/samuelwong100)
 * Philip Tsang ("@qthen":https://github.com/qthen)
 * Jack Hong ("@jackhong6":https://github.com/jackhong6)
 * Shaziana Kaderali ("@ShazianaKaderali":https://github.com/ShazianaKaderali)
