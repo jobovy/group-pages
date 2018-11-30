@@ -32,7 +32,7 @@ The Galactic Astrophysics group is led by Jo Bovy, Canada Research Chair in Gala
 * Mathew Bub ("@mwbub":https://github.com/mwbub)
 * Victor Chan ("@victorcchan":https://github.com/victorcchan)
 * Abhinav Jindal
-* David Hendel
+* David Hendel ("@davidhendel":https://github.com/davidhendel)
 * Jason Hunt (Dunlap Postdoctoral Fellow; "@JASHunt":https://github.com/JASHunt)
 * James Lane ("@jamesmlane":https://github.com/jamesmlane)
 * Henry Leung ("@henrysky":https://github.com/henrysky)
