@@ -40,6 +40,12 @@ The Galactic Astrophysics group is led by Jo Bovy, Canada Research Chair in Gala
 * Nathaniel Starkman ("@nstarman":https://github.com/nstarman)
 * Jeremy Webb (NSERC Postdoctoral Fellow; "@webbjj":https://github.com/webbjj)
 
+"At large" frequent collaborators of the team currently include:
+
+* Masen Lamb (Dunlap Postdoctoral Fellow mainly focused on astronomical instrumentation)
+* Ted Mackereth (Birmingham; "@jmackereth":https://github.com/jmackereth)
+* Nilanjan Banik (GRAPPA; "@nbanik":https://github.com/banik)
+
 Group alumni include:
 
 * Ayush Pandhi ("@AyushPandhi":https://github.com/AyushPandhi)
