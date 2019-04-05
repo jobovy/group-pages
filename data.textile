@@ -98,6 +98,14 @@ catalogs=# set default_transaction_read_only= true;</pre>
 
 but note that this can be turned off by simply running the last command with @false@ instead.
 
+To (re-)start the database, log in as the @postgres@ user
+
+<pre>su postgres</pre>
+
+navigate to the @postgres@ user's home directory, and start the database as
+
+<pre>postgres -D /usr/local/pgsql/data >logfile 2>&1 &</pre>
+
 h2(#download). Downloading data
 
 If you require a large data set, it should be downloaded and kept under the @DATADIR@ directory. Only users that are part of the @datagrp@ group are allowed to write to @DATADIR@. Users are added to this group using
