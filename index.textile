@@ -47,7 +47,7 @@ The Galactic Astrophysics group is led by Jo Bovy, Canada Research Chair in Gala
 
 * Masen Lamb (Dunlap Postdoctoral Fellow mainly focused on astronomical instrumentation)
 * Ted Mackereth (Birmingham; "@jmackereth":https://github.com/jmackereth)
-* Nilanjan Banik (GRAPPA; "@nbanik":https://github.com/banik)
+* Nilanjan Banik (GRAPPA; "@nbanik":https://github.com/nbanik)
 
 Group alumni include:
 
