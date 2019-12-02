@@ -31,26 +31,27 @@ The Galactic Astrophysics group is led by Jo Bovy, Canada Research Chair in Gala
 * Morgan Bennett ("@morganb-phys":https://github.com/morganb-phys/)
 * Adam Butko ("@adambutko":https://github.com/adambutko)
 * Victor Chan ("@victorcchan":https://github.com/victorcchan)
-* Hannah Dykaar ("@HannahDykaar":https://github.com/HannahDykaar)
-* Turner Garrow ("@turnergarrow":https://github.com/turnergarrow)
+* Chloe Cheng ("chloe-mt-cheng":https://github.com/chloe-mt-cheng)
 * David Hendel ("@davidhendel":https://github.com/davidhendel)
-* Jason Hunt (Dunlap Postdoctoral Fellow; "@JASHunt":https://github.com/JASHunt)
 * James Lane ("@jamesmlane":https://github.com/jamesmlane)
 * Henry Leung ("@henrysky":https://github.com/henrysky)
 * Aarya Patil ("@aaryapatil":https://github.com/aaryapatil)
 * Natalie Price-Jones ("@npricejones":https://github.com/npricejones)
 * Nathaniel Starkman ("@nstarman":https://github.com/nstarman)
 * Jeremy Webb (NSERC Postdoctoral Fellow; "@webbjj":https://github.com/webbjj)
-* Harrison Winch
 
 "At large" frequent collaborators of the team currently include:
 
 * Masen Lamb (Dunlap Postdoctoral Fellow mainly focused on astronomical instrumentation)
 * Ted Mackereth (Birmingham; "@jmackereth":https://github.com/jmackereth)
-* Nilanjan Banik (GRAPPA; "@nbanik":https://github.com/nbanik)
+* Nilanjan Banik (Texas A&M; "@nbanik":https://github.com/nbanik)
 
 Group alumni include:
 
+* Jason Hunt (former Dunlap Postdoctoral Fellow; "@JASHunt":https://github.com/JASHunt)
+* Hannah Dykaar ("@HannahDykaar":https://github.com/HannahDykaar)
+* Harrison Winch
+* Turner Garrow ("@turnergarrow":https://github.com/turnergarrow)
 * Mathew Bub ("@mwbub":https://github.com/mwbub)
 * Abhinav Jindal ("@abhinav-jindal":https://github.com/abhinav-jindal)
 * Ayush Pandhi ("@AyushPandhi":https://github.com/AyushPandhi)
