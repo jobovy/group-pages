@@ -1,9 +1,5 @@
 # group-pages
 
-Jekyll group webpages for Bovy's group. Build with
+Jekyll group webpages for Bovy's group. 
 
-```
-jekyll build --destination <destination>
-```
-
-Pretty simple, no?
+![Update website](https://github.com/jobovy/group-pages/workflows/Update%20website/badge.svg)
