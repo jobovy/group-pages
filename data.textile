@@ -102,9 +102,9 @@ To (re-)start the database, log in as the @postgres@ user
 
 <pre>su postgres</pre>
 
-navigate to the @postgres@ user's home directory, and start the database as
+and start the database as
 
-<pre>postgres -D /usr/local/pgsql/data >logfile 2>&1 &</pre>
+<pre>cd ~postgres && postgres -D /usr/local/pgsql/data >logfile 2>&1 &</pre>
 
 h2(#download). Downloading data
 
