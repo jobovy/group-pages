@@ -17,9 +17,10 @@ jobs:
           ruby-version: '2.6'
       # Install jekyll and the Jekyll textile converter
       - name: Install Jekyll
+        shell: bash -l {0}
         run: |
-        	gem install jekyll
-        	gem install jekyll-textile-converter
+          gem install jekyll
+          gem install jekyll-textile-converter
       # Build the website locally
       - name: Build website
         shell: bash -l {0}
