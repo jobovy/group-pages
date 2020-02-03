@@ -29,4 +29,4 @@ jobs:
       # Upload to lepus
       - name: Upload
         shell: bash -l {0}
-        run: rsync -e"ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" -azv rsync _site/ bovy@lepus.astro.utoronto.ca:/home/bovy/web/group/
+        run: rsync -e"ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" -azv _site/ bovy@lepus.astro.utoronto.ca:/home/bovy/web/group/
