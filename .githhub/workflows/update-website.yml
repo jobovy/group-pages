@@ -1,0 +1,32 @@
+name: Update website
+
+# Update on every push
+on: [push]
+
+jobs:
+  build:
+    name: Update website
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'ci skip')"
+    steps:
+      # check-out this repository
+      - uses: actions/checkout@v2
+      # Setup ruby
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+      # Install jekyll
+      - name: Install Jekyll
+        run: gem install jekyll bundler
+      # Build the website locally
+      - name: Build website
+        shell: bash -l {0}
+        run: jekyll build
+      # Setup SSH agent
+      - uses: webfactory/ssh-agent@v0.2.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      # Upload to lepus
+      - name: Upload
+        shell: bash -l {0}
+        run: rsync -e"ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" -azv rsync _site/ bovy@lepus.astro.utoronto.ca:/home/bovy/web/group/
