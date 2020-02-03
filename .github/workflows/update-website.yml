@@ -21,7 +21,9 @@ jobs:
       # Build the website locally
       - name: Build website
         shell: bash -l {0}
-        run: jekyll build
+        run: |
+          jekyll build
+          ls _site
       # Setup SSH agent
       - uses: webfactory/ssh-agent@v0.2.0
         with:
