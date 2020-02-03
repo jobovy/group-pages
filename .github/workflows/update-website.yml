@@ -28,5 +28,6 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       # Upload to lepus
       - name: Upload
+        working-directory: _site
         shell: bash -l {0}
-        run: rsync -e"ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" -azv _site/ bovy@lepus.astro.utoronto.ca:/home/bovy/web/group/
+        run: rsync -e"ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" -azv ./ bovy@lepus.astro.utoronto.ca:/home/bovy/web/group/
