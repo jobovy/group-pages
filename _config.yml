@@ -1,1 +1,3 @@
 highlighter: pygments
+plugins:
+- jekyll-textile-converter

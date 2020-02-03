@@ -15,15 +15,15 @@ jobs:
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.6'
-      # Install jekyll
+      # Install jekyll and the Jekyll textile converter
       - name: Install Jekyll
-        run: gem install jekyll
+        run: |
+	   gem install jekyll
+	   gem install jekyll-textile-converter
       # Build the website locally
       - name: Build website
         shell: bash -l {0}
-        run: |
-          jekyll build
-          ls _site
+        run: jekyll build
       # Setup SSH agent
       - uses: webfactory/ssh-agent@v0.2.0
         with:
