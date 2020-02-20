@@ -15,6 +15,16 @@ h3(#apogee). APOGEE data
 
 The APOGEE data are located at @$DATADIR/sdss/apogee@ following the layout described "here":https://github.com/jobovy/apogee#data-files-and-environment-variables. To use this data, you should set an environment variable @SDSS_LOCAL_SAS_MIRROR@ to point to @$DATADIR/sdss/apogee@. This wil allow use of the "@apogee@":https://github.com/jobovy/apogee package, but will also be more generally useful.
 
+We can download the APOGEE data with commands like
+
+<pre>rsync -avz --include='*/' --include='*/*/' --include='apStar-*.fits' --include='asStar-*.fits' --exclude='*' rsync://SDSS_DATA_USERNAME@dtn01.sdss.org/sas/SDSS_DATA_RELEASE/apogee/spectro/redux/SDSS_DATA_REDUX/stars/ .</pre>
+
+for @apStar/asStar@ files in the @stars/@ directory and
+
+<pre>rsync -avz --include='*/' --include='*/*/' --include='aspcapStar-*.fits' --include='allStar*.fits' --include='allVisit*.fits' --exclude='*' rsync://SDSS_DATA_USERNAME@dtn01.sdss.org/sas/SDSS_DATA_RELEASE/apogee/spectro/aspcap/SDSS_DATA_REDUX/SDSS_ASPCAP_REDUX/ .</pre>
+
+for @aspcapStar@ files and the @allStar@ and @allVisit@ files. In these commands, @SDSS_DATA_USERNAME@ is the general SDSS username for accessing data and @SDSS_DATA_RELEASE@, @SDSS_DATA_REDUX@, and @SDSS_ASPCAP_REDUX@ are the reduction identifiers (e.g., @r12@ and @l33@ for DR16). [Note that these commands have not been tested (much)].
+
 h3(#gaia). Gaia data
 
 The Gaia data are located at @$DATADIR/Gaia@ following the layout of the Gaia data archive. To use this data as part of the "@gaia_tools@":https://github.com/jobovy/gaia_tools package, you should set an environment variable @GAIA_TOOLS_DATA@ to point to @$DATADIR/data4code/gaia_tools@.
