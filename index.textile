@@ -28,11 +28,12 @@ h2(#who). Who are we?
 
 The Galactic Astrophysics group is led by Jo Bovy, Canada Research Chair in Galactic Astrophysics. Current members of the team are:
 * Jo Bovy ("@jobovy":https://github.com/jobovy/)
+* Yumna Arshad ("@yumnaarshad":https://github.com/yumnaarshad/)
 * Morgan Bennett ("@morganb-phys":https://github.com/morganb-phys/)
 * Adam Butko ("@adambutko":https://github.com/adambutko)
 * Victor Chan ("@victorcchan":https://github.com/victorcchan)
 * Chloe Cheng ("chloe-mt-cheng":https://github.com/chloe-mt-cheng)
-* David Hendel ("@davidhendel":https://github.com/davidhendel)
+* Daniel Gilman
 * James Lane ("@jamesmlane":https://github.com/jamesmlane)
 * Henry Leung ("@henrysky":https://github.com/henrysky)
 * Aarya Patil ("@aaryapatil":https://github.com/aaryapatil)
@@ -48,6 +49,7 @@ The Galactic Astrophysics group is led by Jo Bovy, Canada Research Chair in Gala
 
 Group alumni include:
 
+* David Hendel ("@davidhendel":https://github.com/davidhendel)
 * Jason Hunt (former Dunlap Postdoctoral Fellow; "@JASHunt":https://github.com/JASHunt)
 * Hannah Dykaar ("@HannahDykaar":https://github.com/HannahDykaar)
 * Harrison Winch
