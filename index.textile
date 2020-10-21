@@ -28,29 +28,35 @@ h2(#who). Who are we?
 
 The Galactic Astrophysics group is led by Jo Bovy, Canada Research Chair in Galactic Astrophysics. Current members of the team are:
 * Jo Bovy ("@jobovy":https://github.com/jobovy/)
-* Yumna Arshad ("@yumnaarshad":https://github.com/yumnaarshad/)
+* Lily Bateman ("@lilybateman": https://github.com/lilybateman)
 * Morgan Bennett ("@morganb-phys":https://github.com/morganb-phys/)
-* Adam Butko ("@adambutko":https://github.com/adambutko)
 * Victor Chan ("@victorcchan":https://github.com/victorcchan)
-* Chloe Cheng ("chloe-mt-cheng":https://github.com/chloe-mt-cheng)
-* Daniel Gilman
+* Daniel Gilman "@dangilman":https://github.com/dangilman)
 * James Lane ("@jamesmlane":https://github.com/jamesmlane)
 * Henry Leung ("@henrysky":https://github.com/henrysky)
+* Ted Mackereth (Birmingham; "@jmackereth":https://github.com/jmackereth)
 * Aarya Patil ("@aaryapatil":https://github.com/aaryapatil)
-* Natalie Price-Jones ("@npricejones":https://github.com/npricejones)
+* Yansong Qian
+* Josh Speagle ("@joshspeagle": https://github.com/joshspeagle)
 * Nathaniel Starkman ("@nstarman":https://github.com/nstarman)
 * Jeremy Webb (NSERC Postdoctoral Fellow; "@webbjj":https://github.com/webbjj)
 
 "At large" frequent collaborators of the team currently include:
 
-* Masen Lamb (Dunlap Postdoctoral Fellow mainly focused on astronomical instrumentation)
-* Ted Mackereth (Birmingham; "@jmackereth":https://github.com/jmackereth)
 * Nilanjan Banik (Texas A&M; "@nbanik":https://github.com/nbanik)
 
-Group alumni include:
+PhD and postdoc Group alumni include:
 
-* David Hendel ("@davidhendel":https://github.com/davidhendel)
+* Natalie Price-Jones (PhD; "@npricejones":https://github.com/npricejones)
+* Masen Lamb (Postdoc)
+* David Hendel (Postdoc; "@davidhendel":https://github.com/davidhendel)
 * Jason Hunt (former Dunlap Postdoctoral Fellow; "@JASHunt":https://github.com/JASHunt)
+
+Undegraduate and MA alumni include:
+
+* Chloe Cheng ("chloe-mt-cheng":https://github.com/chloe-mt-cheng)
+* Yumna Arshad ("@yumnaarshad":https://github.com/yumnaarshad/)
+* Adam Butko ("@adambutko":https://github.com/adambutko)
 * Hannah Dykaar ("@HannahDykaar":https://github.com/HannahDykaar)
 * Harrison Winch
 * Turner Garrow ("@turnergarrow":https://github.com/turnergarrow)
