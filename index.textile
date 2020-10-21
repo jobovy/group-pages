@@ -28,18 +28,18 @@ h2(#who). Who are we?
 
 The Galactic Astrophysics group is led by Jo Bovy, Canada Research Chair in Galactic Astrophysics. Current members of the team are:
 * Jo Bovy ("@jobovy":https://github.com/jobovy/)
-* Lily Bateman ("@lilybateman": https://github.com/lilybateman)
+* Lily Bateman ("@lilybateman":https://github.com/lilybateman)
 * Morgan Bennett ("@morganb-phys":https://github.com/morganb-phys/)
 * Victor Chan ("@victorcchan":https://github.com/victorcchan)
 * Daniel Gilman "@dangilman":https://github.com/dangilman)
 * James Lane ("@jamesmlane":https://github.com/jamesmlane)
 * Henry Leung ("@henrysky":https://github.com/henrysky)
-* Ted Mackereth (Birmingham; "@jmackereth":https://github.com/jmackereth)
+* Ted Mackereth (Banting/CITA/Dunlap Fellow; "@jmackereth":https://github.com/jmackereth)
 * Aarya Patil ("@aaryapatil":https://github.com/aaryapatil)
 * Yansong Qian
-* Josh Speagle ("@joshspeagle": https://github.com/joshspeagle)
+* Josh Speagle (Banting/Dunlap Fellow; "@joshspeagle":https://github.com/joshspeagle)
 * Nathaniel Starkman ("@nstarman":https://github.com/nstarman)
-* Jeremy Webb (NSERC Postdoctoral Fellow; "@webbjj":https://github.com/webbjj)
+* Jeremy Webb (NSERC Postdoctoral Fellow, now Asst. Prof. at UofT; "@webbjj":https://github.com/webbjj)
 
 "At large" frequent collaborators of the team currently include:
 
