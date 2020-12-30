@@ -106,7 +106,12 @@ Finally, the @catalogs@ database was made read-only by default using
 <pre>> psql catalogs <notextile>-</notextile>U postgres
 catalogs=# set default_transaction_read_only= true;</pre>
 
-but note that this can be turned off by simply running the last command with @false@ instead.
+but note that this can be turned off by simply running the last command with @false@ instead. The Gaia EDR3 data in the database were loaded with similar commands and schemas as for the DR2 data as described above, except that when loading this data, the read-only default gave issues and it was necessary to alter the postgres user's default permissions as
+
+<pre>>psql catalogs <notextile>-</notextile>U postgres
+catalogs=# alter user postgres set default_transaction_read_only= false;</pre>
+
+and then to undo this after. This makes sense, since the @default_transaction_read_only@ parameter is a session parameter, but it doesn't make sense why this wasn't necessary before...
 
 To (re-)start the database, log in as the @postgres@ user
 
