@@ -167,7 +167,7 @@ The above only creates the account on one server. To make the same account on al
 To delete a user do
 
 <pre>
-$ sudo deluser -r NEW_USERNAME
+$ sudo userdel -r NEW_USERNAME
 </pre>
 
 on all servers. Also remove the scratch directory.
