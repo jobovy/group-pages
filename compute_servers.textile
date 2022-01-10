@@ -163,3 +163,11 @@ $ sudo chown -R NEW_USERNAME NEW_USERNAME
 </pre>
 
 The above only creates the account on one server. To make the same account on all servers, add the new user using @useradd@ on each after they setup their password. Then edit @/etc/passwd@ and @/etc/group@ such that it is the same, and copy the entry between the first colons in @/etc/shadow@ (note that you might have to make @/etc/shadow@ writeable first).
+
+To delete a user do
+
+<pre>
+$ sudo deluser -r NEW_USERNAME
+</pre>
+
+on all servers. Also remove the scratch directory.
