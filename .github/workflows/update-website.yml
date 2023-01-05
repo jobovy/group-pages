@@ -26,11 +26,13 @@ jobs:
         shell: bash -l {0}
         run: jekyll build
       # Setup SSH agent
-      - uses: webfactory/ssh-agent@v0.4.1
+      - uses: webfactory/ssh-agent@v0.7.0
+        if: startsWith(github.ref,'refs/heads/main') && github.event_name != 'pull_request'
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       # Upload to lepus
       - name: Upload
+        if: startsWith(github.ref,'refs/heads/main') && github.event_name != 'pull_request'
         working-directory: _site
         shell: bash -l {0}
         run: rsync -e"ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" -azv ./ bovy@lepus.astro.utoronto.ca:/home/bovy/web/group/
