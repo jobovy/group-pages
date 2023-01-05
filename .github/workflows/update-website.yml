@@ -12,9 +12,9 @@ jobs:
       # check-out this repository
       - uses: actions/checkout@v2
       # Setup ruby
-      - uses: actions/setup-ruby@v1
+      - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.6'
+          ruby-version: '3.0'
       # Install jekyll and the Jekyll textile converter
       - name: Install Jekyll
         shell: bash -l {0}
