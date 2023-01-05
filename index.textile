@@ -28,15 +28,15 @@ h2(#who). Who are we?
 
 The Galactic Astrophysics group is led by Jo Bovy, Canada Research Chair in Galactic Astrophysics. Current members of the team are:
 * Jo Bovy ("@jobovy":https://github.com/jobovy/)
-* Morgan Bennett ("@morganb-phys":https://github.com/morganb-phys/)
 * Victor Chan ("@victorcchan":https://github.com/victorcchan)
+* Fraser Evans (UofT A&S fellow; "@fraserevans":https://github.com/fraserevans)
+* Neige Frankel (UofT A&S/CITA fellow; "@neigef":https://github.com/neigef)
 * Daniel Gilman "@dangilman":https://github.com/dangilman)
 * James Lane ("@jamesmlane":https://github.com/jamesmlane)
 * Henry Leung ("@henrysky":https://github.com/henrysky)
-* Ted Mackereth (Banting/CITA/Dunlap Fellow; "@jmackereth":https://github.com/jmackereth)
 * Aarya Patil ("@aaryapatil":https://github.com/aaryapatil)
-* Yansong Qian ("@qianyans":https://github.com/qianyans)
-* Josh Speagle (Banting/Dunlap Fellow; "@joshspeagle":https://github.com/joshspeagle)
+* Alicia Savelli
+* Yingyi Song
 * Nathaniel Starkman ("@nstarman":https://github.com/nstarman)
 * Jeremy Webb (NSERC Postdoctoral Fellow, now Asst. Prof. at UofT; "@webbjj":https://github.com/webbjj)
 
@@ -46,6 +46,9 @@ The Galactic Astrophysics group is led by Jo Bovy, Canada Research Chair in Gala
 
 PhD and postdoc Group alumni include:
 
+* Josh Speagle (Banting/Dunlap Fellow, now Asst. Prof. at UofT; "@joshspeagle":https://github.com/joshspeagle)
+* Ted Mackereth (Banting/CITA/Dunlap Fellow; "@jmackereth":https://github.com/jmackereth)
+* Morgan Bennett (PhD; "@morganb-phys":https://github.com/morganb-phys/)
 * Natalie Price-Jones (PhD; "@npricejones":https://github.com/npricejones)
 * Masen Lamb (Postdoc)
 * David Hendel (Postdoc; "@davidhendel":https://github.com/davidhendel)
@@ -53,6 +56,7 @@ PhD and postdoc Group alumni include:
 
 Undegraduate and MA alumni include:
 
+* Yansong Qian ("@qianyans":https://github.com/qianyans)
 * Lily Bateman ("@lilybateman":https://github.com/lilybateman)
 * Chloe Cheng ("chloe-mt-cheng":https://github.com/chloe-mt-cheng)
 * Yumna Arshad ("@yumnaarshad":https://github.com/yumnaarshad/)
