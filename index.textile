@@ -40,11 +40,7 @@ The Galactic Astrophysics group is led by Jo Bovy, Canada Research Chair in Gala
 * Nathaniel Starkman ("@nstarman":https://github.com/nstarman)
 * Jeremy Webb (NSERC Postdoctoral Fellow, now Asst. Prof. at UofT; "@webbjj":https://github.com/webbjj)
 
-"At large" frequent collaborators of the team currently include:
-
-* Nilanjan Banik (Texas A&M; "@nbanik":https://github.com/nbanik)
-
-PhD and postdoc Group alumni include:
+PhD and postdoc group alumni include:
 
 * Josh Speagle (Banting/Dunlap Fellow, now Asst. Prof. at UofT; "@joshspeagle":https://github.com/joshspeagle)
 * Ted Mackereth (Banting/CITA/Dunlap Fellow; "@jmackereth":https://github.com/jmackereth)
