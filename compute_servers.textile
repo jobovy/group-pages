@@ -147,16 +147,10 @@ h2(#users). Adding users
 Adding users is easily done by
 
 <pre>
-$ sudo useradd NEW_USERNAME
+$ sudo adduser NEW_USERNAME
 </pre>
 
-and then setup a random password (from a service like "RANDOM.ORG":https://www.random.org/passwords) using
-
-<pre>
-$ sudo passwd NEW_USERNAME
-</pre>
-
-This password should be immediately changed by the new user. Make a scratch directory and change the ownership to the new user with
+which will ask for a new password which you can create using a service like "RANDOM.ORG":https://www.random.org/passwords. This password should be immediately changed by the new user. Make a scratch directory and change the ownership to the new user with
 
 <pre>
 $ sudo chown -R NEW_USERNAME NEW_USERNAME
@@ -173,7 +167,7 @@ $ sudo usermod -aG docker NEW_USERNAME
 To delete a user do
 
 <pre>
-$ sudo userdel -r NEW_USERNAME
+$ sudo deluser --remove-home NEW_USERNAME
 </pre>
 
 on all servers. Also remove the scratch directory.
