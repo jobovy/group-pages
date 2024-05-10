@@ -156,7 +156,7 @@ which will ask for a new password which you can create using a service like "RAN
 $ sudo chown -R NEW_USERNAME NEW_USERNAME
 </pre>
 
-The above only creates the account on one server. To make the same account on all servers, add the new user using @useradd@ on each after they setup their password. Then edit @/etc/passwd@ and @/etc/group@ such that it is the same, and copy the entry between the first colons in @/etc/shadow@ (note that you might have to make @/etc/shadow@ writeable first).
+The above only creates the account on one server. To make the same account on all servers, add the new user using @useradd@ on each new after they setup their password (don't use @adduser@, just @useradd@). Then edit @/etc/passwd@ and @/etc/group@ such that it is the same, and copy the entry between the first colons in @/etc/shadow@ (note that you might have to make @/etc/shadow@ writeable first).
 
 To allow a user to use @Docker@, add them to the @docker@ group
 
