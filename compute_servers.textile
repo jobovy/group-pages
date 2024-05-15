@@ -3,7 +3,7 @@ layout: default
 title: Compute servers in the department
 ---
 
-Currently, there are two compute servers. This page gives some pointers on how to use them. The computational-load status of the servers is available "here":https://www.astro.utoronto.ca/~bovy/servers/status.html .
+Currently, there are two compute servers. This page gives some pointers on how to use them. The computational-load status of the servers is available "here":https://www.astro.utoronto.ca/~bovy/servers/status.html.
 
 h2(#setup). Setup and SSH keys
 
